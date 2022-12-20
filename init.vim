@@ -14,6 +14,7 @@ Plug 'reasonml-editor/vim-reason-plus'
 Plug 'airblade/vim-gitgutter'
 Plug 'aleksrutins/vimdiscord'
 Plug 'udalov/kotlin-vim'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -22,6 +23,8 @@ let g:vimdiscord_full_path = 0
 colorscheme dracula
 set number
 map <C-p> :FZF<CR>
+
+imap <c-space> <Plug>(asyncomplete_force_refresh)
 
 let g:lsp_diagnostics_echo_cursor = 1
 " ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
@@ -56,8 +59,6 @@ for tool in s:opam_packages
   endif
 endfor
 " ## end of OPAM user-setup addition for vim / base ## keep this line
-
-set swapfile
 set dir=~/tmp
 
 if has('gui_running')
