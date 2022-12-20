@@ -59,3 +59,9 @@ endfor
 
 set swapfile
 set dir=~/tmp
+
+if has('gui_running')
+	set go+=d
+	set go-=m
+	set go-=T
+endif
